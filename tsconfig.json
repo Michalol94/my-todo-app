@@ -24,6 +24,9 @@
         "paths": {
             "@navbar": [
                 "projects/navbar/src/index.ts"
+            ],
+            "@data-picker": [
+                "projects/data-picker/src/index.ts"
             ]
         }
     },

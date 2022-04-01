@@ -128,6 +128,29 @@
                     "defaultConfiguration": "production"
                 }
             }
+        },
+        "data-picker": {
+            "projectType": "library",
+            "root": "projects/data-picker",
+            "sourceRoot": "projects/data-picker/src",
+            "prefix": "lib",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
+                    "options": {
+                        "project": "projects/data-picker/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/data-picker/tsconfig.lib.prod.json"
+                        },
+                        "development": {
+                            "tsConfig": "projects/data-picker/tsconfig.lib.json"
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                }
+            }
         }
     },
     "defaultProject": "my-todo-app"

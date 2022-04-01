@@ -1,0 +1,42 @@
+<div class="pt-4 d-flex align-items-center" *ngFor=" let item of displayData$ | async">
+    <div class="p-0 bd-highlight">
+        <p class="fs-2 fw-bold">
+            {{item.text}}
+        </p>
+    </div>
+    <div class="p-3 bd-highlight">
+        <p class="fs-5">
+            {{item.date | date}}
+        </p>
+    </div>
+</div>
+<hr />
+
+
+
+<!-- <div class="row" *ngFor="let item of displayData$ | async">
+    <div class="col-sm-auto">
+        <p class="fs-1 fw-bold">
+            <span class="align-middle">
+                {{item.text}}
+            </span>
+        </p>
+    </div>
+    <div class="col-sm-auto">
+        <span class="align-middle">
+            {{item.date | date}}
+        </span>
+    </div>
+</div> -->
+
+<!-- <li *ngFor="let item of displayData$ | async">
+                <h5>
+                    <p class="fw-bold">{{item.text}}</p>
+                </h5>
+                <h5>
+                    <p class="fw-bold">{{item.date | date}}</p>
+                </h5>
+            </li>
+        </ul>
+    </div>
+</nav> -->
