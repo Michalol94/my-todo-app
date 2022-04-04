@@ -5,8 +5,14 @@ import { GETS_ALL_TASK_DTO, GetsAllTaskDtoPort } from '../../../application/port
 
 @Component({ selector: 'lib-get-tasks', templateUrl: './get-tasks.component.html', encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush })
 export class GetTasksComponent {
+
+
+
   tasks$: Observable<TaskDTO[]> = this._getsAllTaskDto.getAll();
 
   constructor(@Inject(GETS_ALL_TASK_DTO) private _getsAllTaskDto: GetsAllTaskDtoPort) {
   }
+
+
+
 }

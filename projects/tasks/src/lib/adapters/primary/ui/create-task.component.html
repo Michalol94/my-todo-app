@@ -1,5 +1,5 @@
 <div class="row row-cols-1 row-cols-md-3">
-    <div class="col">
+    <div class="pt-2 col">
         <form [formGroup]="createTask" (ngSubmit)="onCreateTaskSubmited(createTask)">
             <textarea class="form-control" formControlName="text" rows="3" placeholder="Write your message here"
                 [(ngModel)]="taskMessage"> </textarea>
