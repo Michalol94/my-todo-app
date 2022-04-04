@@ -16,9 +16,7 @@ export class CreateTaskComponent {
     this._addsTaskDto.add({
       text: createTask.get('text')?.value
     });
-    alert(
-      `Message added! :)`
-    );
+
     this.createTask.reset();
   }
 }

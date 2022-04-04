@@ -1,7 +1,7 @@
 <ul class="form-check">
     <li class="pt-1 d-flex" *ngFor="let task of tasks$ | async">
         <div class="p-3 bd-highlight">
-            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="defaultCheck1">
+            <input class="form-check-input" [value]="['{{task.id}}']" type="checkbox" name="flexRadioDefault">
             <label class="strikethrough">{{task.text}}</label>
         </div>
         <div class="ms-auto p-2 bd-highlight">
@@ -11,12 +11,16 @@
                     ... <span class="caret"></span>
                 </button>
                 <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                    <li role="menuitem"><a class="dropdown-item" href="#">Delete task</a></li>
+                    <li role="menuitem"><button class="dropdown-item" (click)="onItemClicked(task.id)">Delete
+                            Task</button>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </li>
 </ul>
+
 
 
 <div class="py-3">
