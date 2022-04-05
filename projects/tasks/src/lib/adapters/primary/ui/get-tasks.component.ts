@@ -17,4 +17,5 @@ export class GetTasksComponent {
   onItemClicked(id: string): void {
     this._removesTaskDto.remove(id);
   }
+
 }
