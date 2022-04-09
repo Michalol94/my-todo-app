@@ -14,7 +14,8 @@ export class CreateTaskComponent {
 
   onCreateTaskSubmited(createTask: FormGroup): void {
     this._addsTaskDto.add({
-      text: createTask.get('text')?.value
+      text: createTask.get('text')?.value,
+      isChecked: false
     });
 
     this.createTask.reset();

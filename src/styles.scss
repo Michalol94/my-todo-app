@@ -7,6 +7,10 @@
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
 
-input[type=checkbox]:checked+label.strikethrough {
-    text-decoration: line-through;
+// input[type=checkbox]:checked+label.strikethrough {
+//     text-decoration: line-through;
+// }
+
+.pointer:hover {
+    cursor: pointer;
 }
