@@ -1,0 +1,9 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="card-group">
+      <div class="card ms-5" *ngFor="let item of image$ | async">
+        <img [src]="[item.imageUrl]" class="card-img-top" alt="..." />
+      </div>
+    </div>
+  </div>
+</div>

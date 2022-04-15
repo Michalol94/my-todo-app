@@ -10,17 +10,16 @@ import { DataPickerComponentModule } from '@data-picker';
 import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    NavbarComponentModule, DataPickerComponentModule,
+    NavbarComponentModule,
+    DataPickerComponentModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firestoreConfig)
+    AngularFireModule.initializeApp(environment.firestoreConfig),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,19 +1,24 @@
 <div class="container-fluid">
-    <div class="row justify-content-md-center">
-        <div class="col col-lg-2">
-        </div>
-        <div class="col-md-auto">
-            <p class="mt-5 fs-2 fw-bold">
-                Organise your time with this simple app
-            </p>
-            <p class="fs-5 text-center">
-                All your tasks that are due today will show up here
-            </p>
-            <div class="mt-4 d-grid gap-2 col-2 mx-auto">
-                <button type="button" [routerLink]="['/addTask']" class="btn btn-danger"
-                    style="background-color: #d40909bc;">Add task</button>
-            </div>
-        </div>
-        <div class="col col-lg-2">
-        </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2"></div>
+    <div class="col-md-auto">
+      <p class="mt-5 fs-2 fw-bold">Organise your time with this simple app</p>
+      <p class="fs-5 text-center">
+        All your tasks that are due today will show up here
+      </p>
+      <div class="mt-4 d-grid gap-2 col-2 mx-auto">
+        <button
+          type="button"
+          [routerLink]="['/addTask']"
+          class="btn btn-danger"
+          style="background-color: #d40909bc"
+        >
+          Add task
+        </button>
+      </div>
     </div>
+    <div class="col col-lg-2"></div>
+  </div>
+
+  <lib-show-images></lib-show-images>
+</div>
