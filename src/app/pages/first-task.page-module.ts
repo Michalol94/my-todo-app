@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HomePage } from './home.page';
+import { FirstTaskPage } from './first-task.page';
+import { CreateTaskComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/create-task.component-module';
 import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adapters/secondary/infrastructure/firebase-tasks.service-module';
 import { GetTasksComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/get-tasks.component-module';
 import { ShowImagesComponentModule } from '../../../projects/images/src/lib/adapters/primary/ui/show-images.component-module';
 import { FirebaseGetImagesServiceModule } from '../../../projects/images/src/lib/adapters/secondary/infrastructure/firebase-get-images.service-module';
-import { HomeComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/home.component-module';
 
 @NgModule({
   imports: [
@@ -14,17 +14,17 @@ import { HomeComponentModule } from '../../../projects/tasks/src/lib/adapters/pr
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage,
+        component: FirstTaskPage,
       },
     ]),
-    HomeComponentModule,
+    CreateTaskComponentModule,
     FirebaseTasksServiceModule,
     GetTasksComponentModule,
     ShowImagesComponentModule,
     FirebaseGetImagesServiceModule,
   ],
-  declarations: [HomePage],
+  declarations: [FirstTaskPage],
   providers: [],
   exports: [],
 })
-export class HomePageModule {}
+export class FirstTaskPageModule {}

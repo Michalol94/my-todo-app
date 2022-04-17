@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     BsDropdownModule.forRoot(),
     AlertModule.forRoot(),
     ModalModule.forRoot(),
+    RouterModule,
   ],
   declarations: [GetTasksComponent],
   providers: [],

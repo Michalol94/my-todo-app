@@ -9,6 +9,7 @@ import {
   ADDS_TASK_DTO,
   AddsTaskDtoPort,
 } from '../../../application/ports/secondary/adds-task.dto-port';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-create-task',
@@ -22,7 +23,10 @@ export class CreateTaskComponent {
     text: new FormControl(),
   });
 
-  constructor(@Inject(ADDS_TASK_DTO) private _addsTaskDto: AddsTaskDtoPort) {}
+  constructor(
+    @Inject(ADDS_TASK_DTO) private _addsTaskDto: AddsTaskDtoPort,
+    private router: Router
+  ) {}
 
   onCreateTaskSubmited(createTask: FormGroup): void {
     this._addsTaskDto.add({
@@ -32,5 +36,6 @@ export class CreateTaskComponent {
     });
 
     this.createTask.reset();
+    this.router.navigate(['/addTask']);
   }
 }
