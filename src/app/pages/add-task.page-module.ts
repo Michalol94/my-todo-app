@@ -7,22 +7,27 @@ import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adap
 import { GetTasksComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/get-tasks.component-module';
 import { ShowImagesComponentModule } from '../../../projects/images/src/lib/adapters/primary/ui/show-images.component-module';
 import { FirebaseGetImagesServiceModule } from '../../../projects/images/src/lib/adapters/secondary/infrastructure/firebase-get-images.service-module';
+import { DeleteTaskComponentModule, InMemoryTasksStorageModule } from '@tasks';
 
-@NgModule({ imports: [CommonModule, 
-      RouterModule.forChild([
-        {
-          path: '',
-          component: AddTaskPage,
-        }
-      ]),
-  CreateTaskComponentModule,
-  FirebaseTasksServiceModule,
-  GetTasksComponentModule,
-  ShowImagesComponentModule,
-  FirebaseGetImagesServiceModule
-],
-  	declarations: [AddTaskPage],
-  	providers: [],
-  	exports: [] })
-export class AddTaskPageModule {
-}
+@NgModule({
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: AddTaskPage,
+      },
+    ]),
+    CreateTaskComponentModule,
+    FirebaseTasksServiceModule,
+    GetTasksComponentModule,
+    ShowImagesComponentModule,
+    FirebaseGetImagesServiceModule,
+    InMemoryTasksStorageModule,
+    DeleteTaskComponentModule,
+  ],
+  declarations: [AddTaskPage],
+  providers: [],
+  exports: [],
+})
+export class AddTaskPageModule {}

@@ -23,6 +23,11 @@ import {
 } from '../../../application/ports/secondary/sets-task.dto-port';
 import { AlertComponent } from 'ngx-bootstrap/alert';
 import { Router } from '@angular/router';
+import { DeleteTaskComponent } from './delete-task.component';
+import {
+  TaskDtoStoragePort,
+  TASK_DTO_STORAGE,
+} from '../../../application/ports/secondary/task-dto.storage-port';
 
 @Component({
   selector: 'lib-get-tasks',
@@ -44,28 +49,35 @@ export class GetTasksComponent {
     @Inject(GETS_ALL_TASK_DTO) private _getsAllTaskDto: GetsAllTaskDtoPort,
     @Inject(REMOVES_TASK_DTO) private _removesTaskDto: RemovesTaskDtoPort,
     @Inject(SETS_TASK_DTO) private _setsTaskDto: SetsTaskDtoPort,
-    private router: Router
+    private router: Router,
+    @Inject(TASK_DTO_STORAGE)
+    private _setTaskToInMemoryStorage: TaskDtoStoragePort
   ) {}
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
-  }
+  // openModal(template: TemplateRef<any>) {
+  //   this.modalRef = this.modalService.show(template);
+  // }
 
   // routerLink() {
   //   this.router.navigate(['/']);
   // }
 
-  decline(): void {
-    this.modalRef?.hide();
+  // decline(): void {
+  //   this.modalRef?.hide();
+  // }
+
+  onOpenModal(task: Partial<TaskDTO>) {
+    this.modalRef = this.modalService.show(DeleteTaskComponent);
+    this._setTaskToInMemoryStorage.next(task);
   }
 
-  onItemClicked(id: string): void {
-    this._removesTaskDto.remove(id);
-    this.modalRef?.hide();
-    // if (this.tasks$ === null) {
-    //   this.router.navigate(['/']);
-    // }
-  }
+  // onItemClicked(id: string): void {
+  //   this._removesTaskDto.remove(id);
+  //   this.modalRef?.hide();
+  // if (this.tasks$ === null) {
+  //   this.router.navigate(['/']);
+  // }
+  // }
 
   onCheckedBox(task: any): void {
     if (task.isChecked === false) {
