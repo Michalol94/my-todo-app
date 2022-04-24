@@ -1,4 +1,4 @@
-<div *ngFor="let alert of alerts">
+<!-- <div *ngFor="let alert of alerts">
   <alert
     class="p-3 text-white deleteTask position-absolute top-0 end-0"
     [type]="alert.type"
@@ -6,7 +6,7 @@
     (onClosed)="onClosed(alert)"
     >{{ alert.msg }}</alert
   >
-</div>
+</div> -->
 
 <ul class="form-check">
   <li class="pt-1 d-flex" *ngFor="let task of tasks$ | async">

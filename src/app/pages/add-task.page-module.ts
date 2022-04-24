@@ -7,7 +7,7 @@ import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adap
 import { GetTasksComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/get-tasks.component-module';
 import { ShowImagesComponentModule } from '../../../projects/images/src/lib/adapters/primary/ui/show-images.component-module';
 import { FirebaseGetImagesServiceModule } from '../../../projects/images/src/lib/adapters/secondary/infrastructure/firebase-get-images.service-module';
-import { DeleteTaskComponentModule, InMemoryTasksStorageModule } from '@tasks';
+import { DeleteTaskComponentModule } from '@tasks';
 
 @NgModule({
   imports: [
@@ -23,7 +23,6 @@ import { DeleteTaskComponentModule, InMemoryTasksStorageModule } from '@tasks';
     GetTasksComponentModule,
     ShowImagesComponentModule,
     FirebaseGetImagesServiceModule,
-    InMemoryTasksStorageModule,
     DeleteTaskComponentModule,
   ],
   declarations: [AddTaskPage],
